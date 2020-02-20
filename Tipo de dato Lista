@@ -1,0 +1,21 @@
+void main(){
+  
+  //Listas con elementos infinitos
+  List numeros = [1,2,3,4,5];
+  print(numeros);
+  
+  numeros.add('Hola mundo');
+  print(numeros);
+  
+  List<int> numeros2 = [1,2,3,4,5];
+  print(numeros2);
+  numeros2.add(90);
+  print(numeros2);
+  
+  //Listas con tamaño fijo
+  List masNumeros = List(10);
+  print(masNumeros);
+  masNumeros[9] = 1;
+  print(masNumeros);
+  
+}
