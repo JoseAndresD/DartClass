@@ -1,0 +1,16 @@
+void main(){
+  
+  bool activado = true;
+  print(activado);
+  
+  activado = !activado;
+  
+  //También se puede poner if(!activado)
+  
+  if (activado){
+    print('El motor está funcionando');
+  }else{
+    print('Está apagado');
+  }
+    
+}
