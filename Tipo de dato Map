@@ -1,0 +1,29 @@
+void main(){
+  
+  String propiedad = 'soltero';
+  
+  //Un Map es una clase abstracta y colección de llaves/valores (objeto con pares de valores), el primero la llave y el segundo el valor.
+  
+  Map<String, dynamic> persona = {
+    'nombre' : 'Carlos', //String
+    'edad'   : 32,       //int
+    'soltero': true      //booleano
+  };
+  
+   
+  print(persona['nombre']);
+  print(persona['edad']);
+  print(persona[propiedad]);
+  
+  Map<int, String> personas = {
+    1 : 'Tony',
+    2 : 'Peter',
+    3 : 'Strange'
+  };
+  
+  personas.addAll( {4: 'Banner'} );
+  
+  print(personas);
+  print(personas[2]);
+  
+}
