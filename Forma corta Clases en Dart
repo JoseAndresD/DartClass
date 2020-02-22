@@ -1,0 +1,37 @@
+void main(){
+  
+  //Se ponía new cuando se creaba una instancia de una clase. En la actualidad ya no es así.
+  //En Dart ya no utilizamos var, ahora utilicemos final (la variable no va a cambiar)
+  //Wolverine es una instancia de Heroe
+  final wolverine = new Heroe(nombre: 'Logan', poder: 'regeneración');
+  
+  print(wolverine);
+  //Imprimiendo las propiedades de la clase Heroe
+  print(wolverine.nombre);
+  print(wolverine.poder);
+    
+
+}
+
+//Una clase es como un molde para hacer galletas, el molde se utiliza muchas veces pero se mantiene igual. Como una plantilla para programar.abstract
+
+//El nombre de la clase inicia en mayúscula
+
+
+class Heroe {
+
+  //La clase tiene propiedades a modo de variables.
+  
+  String nombre;
+  String poder;
+  
+  //Contructor. El Constructor tiene el mismo nombre de la clase
+  
+  //Forma abreviada del constructor
+     Heroe({this.nombre, this.poder});
+    
+  //Sobreescribiendo el método de impresión de la clase con un método
+  
+   String toString() => '$nombre - $poder';
+ 
+}
