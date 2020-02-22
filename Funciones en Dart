@@ -1,0 +1,22 @@
+void main(){
+  
+  String mensaje = saludar3(texto: ' Hola', nombre: 'José');
+  print(mensaje);
+}
+
+//Procurar evitar el Dynamic, por ello se puso void en la función saudar()
+String saludar(){
+  //print('Hola');
+  return 'Hola';
+}
+
+//Incluir parámetros en la función
+//Si una función tiene en su constructor llaves, asociénlo que tiene parámetros con nombre
+String saludar2({String texto, String nombre}){
+  return '$texto $nombre';
+}
+
+//Escribiendo la función saludar2() de manera abreviada
+//return es igual a => 
+
+String saludar3({String texto, String nombre}) => '$texto $nombre';
