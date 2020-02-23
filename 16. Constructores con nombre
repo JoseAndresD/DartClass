@@ -1,0 +1,33 @@
+//   final wolverine = new Heroe('Logan', 'Regeneración');
+  
+  //Creación del Json 
+  
+  final rawJson = '{"nombre": "Logan", "poder": "Regeneración"}';
+  //el rawJson es el Json en bruto o crudo
+  
+  Map parsedJson = json.decode(rawJson);
+  //el método json.encode convertirá a Map el valor de rawJson
+  
+  final wolverine = new Heroe.fromJson(parsedJson);
+   
+  print(wolverine.poder);
+  print(wolverine.nombre);
+  
+}
+
+class Heroe{
+  String nombre;
+  String poder;
+  
+  Heroe(this.nombre, this.poder);
+  
+  //crear un constructor trandicional que reciba el valor del Map pero que la clase Heroe no pierda su funcionalidad
+ 
+  Heroe.fromJson(Map parsedJson){
+    nombre = parsedJson['nombre'];
+    poder = parsedJson['poder'];
+    
+  }
+  
+  
+}
