@@ -1,0 +1,41 @@
+//GETTERS Y SETTERS
+//Objetivo: importar propiedades fuera de una clase y exportar propiedades dentro de una clase con get y set
+
+void main(){
+  
+  final cuadrado = new Cuadrado();
+  
+  cuadrado.lado = 80989;
+  
+  print(cuadrado);
+  print('Area: ${cuadrado.area}');
+  
+}
+
+class Cuadrado{
+  double _lado;
+    
+    //Utilizando set para importar la propiedad lado, pero sin utilizar la propiedad _lado que es exclusivamente interna.
+    
+    set lado (double valor){
+    
+    if(valor <= 0){
+      throw('El lado es menor o igual a cero, busque otro valor.');
+    }
+    
+    _lado = valor;
+    
+    
+  }
+  
+  //Utilizando get para exportar propiedad fuera de la clase:
+  //No se utilizará paréntesis
+  double get area => _lado*_lado;
+  
+  
+  
+  toString() => 'Lado : $_lado';
+  
+  
+  
+}
