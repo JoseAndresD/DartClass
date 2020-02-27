@@ -1,0 +1,29 @@
+//EXTENDS
+//Objetivo: Los extends permiten que distintas clases importen propiedades de una clase principal
+
+void main(){
+  
+  final superman = new Heroe();
+  superman.nombre = "Klart Ken";
+  
+  final luthor = new Villano();
+  luthor.nombre = "Lex Luthor";
+  
+  print('${superman.nombre} - ${luthor.nombre}');
+  
+  
+}
+
+abstract class Personaje {
+  String nombre;
+  String poder; 
+}
+
+class Heroe extends Personaje {
+  int valentia;
+}
+
+class Villano extends Personaje {
+  int maldad;
+  
+}
