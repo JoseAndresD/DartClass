@@ -1,0 +1,34 @@
+//MIXINS
+//Objetivo: al tener una jerarquí a de clases, los mixins son clases que pueden ser llamadas de la jerarquía de la clase solicitante.
+
+abstract class Animal {}
+
+abstract class Mamifero extends Animal {}
+abstract class Ave extends Animal {}
+abstract class Pez extends Animal {}
+
+abstract class Nadador{
+  void nadador() => print('Estoy nadando');
+}
+
+abstract class Volador{
+  void volador() => print('Estoy volando');
+}
+
+abstract class Caminante{
+  void caminante() => print('Estoy caminando');
+}
+
+class Perro extends Mamifero with Caminante{}
+class Paloma extends Ave with Caminante, Volador{}
+class Pato extends Ave with Caminante, Volador, Nadador{}
+
+void main(){
+  final pato = new Pato();
+  pato.caminante();
+  
+  final perro = new Perro();
+  perro.caminante();
+  
+  
+}
