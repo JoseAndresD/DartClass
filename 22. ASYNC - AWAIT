@@ -1,0 +1,35 @@
+//ASYNC: AYUDA A TRANSFORMAR UNA FUNCIÓN EN UNA TAREA ASÍNCRONA.
+//AWAIT: AYUDA A ESPERAR A QUE SE RESUELVA LA FUNCIÓN ASYNC.
+//ASYNC Y AWAIT VAN DE LA MANO
+//el código se lee y se para en await (si async está en enunciado), una vez que resuelve sigue ejecutando el resto del código.
+
+void main() async {
+  
+	print('**************CARGANDO******************');
+  
+  String data  = await httpGet('https://api.nasa.com/aliens');
+  print(data);
+  String data2 = await httpGet2('https://www.google.com');
+  print(data2);
+  
+  print('******************FIN********************');
+  
+}
+
+
+
+Future<String> httpGet(String url) {
+  return Future.delayed( new Duration( seconds: 2 ), () {
+    return 'Hola Mundo1';
+  });
+   
+  
+}
+
+Future<String> httpGet2(String url) {
+  return Future.delayed( new Duration( seconds: 2 ), () {
+    return 'Hola Mundo2';
+  });
+   
+  
+}
